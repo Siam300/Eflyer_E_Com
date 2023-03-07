@@ -27,8 +27,8 @@ def index(request):
     
 
     context = {
-        "fashion" : Fashion,
-        "electronics" : Electronics,
-        "ewelery" : Jewellery
+        "Fashion" : Fashion,
+        "Electronics" : Electronics,
+        "Jewellery" : Jewellery
     }
     return render(request, 'index.html', context=context)
