@@ -7,7 +7,7 @@ class manTshirt(models.Model):
     productImage= models.ImageField(upload_to='product_images')
 
     def __str__(self):
-        return "%s" %(self.productName)  (self.productPrice)
+        return  f"{self.productName}  ({self.productPrice})"
     
 class manShirt(models.Model):
     productName= models.CharField(max_length=100)
@@ -15,7 +15,7 @@ class manShirt(models.Model):
     productImage= models.ImageField(upload_to='product_images')
 
     def __str__(self):
-        return "%s" %(self.productName)  (self.productPrice)
+        return  f"{self.productName}  ({self.productPrice})"
     
 class womanScart(models.Model):
     productName= models.CharField(max_length=100)
@@ -23,7 +23,7 @@ class womanScart(models.Model):
     productImage= models.ImageField(upload_to='product_images')
 
     def __str__(self):
-        return "%s" %(self.productName)  (self.productPrice)
+        return  f"{self.productName}  ({self.productPrice})"
     
 class laptop(models.Model):
     productName= models.CharField(max_length=100)
@@ -31,7 +31,7 @@ class laptop(models.Model):
     productImage= models.ImageField(upload_to='product_images')
 
     def __str__(self):
-        return "%s" %(self.productName)  (self.productPrice)
+        return  f"{self.productName}  ({self.productPrice})"
     
 class mobile(models.Model):
     productName= models.CharField(max_length=100)
@@ -39,7 +39,7 @@ class mobile(models.Model):
     productImage= models.ImageField(upload_to='product_images')
 
     def __str__(self):
-        return "%s" %(self.productName)  (self.productPrice)
+        return  f"{self.productName}  ({self.productPrice})"
     
 class computer(models.Model):
     productName= models.CharField(max_length=100)
@@ -47,7 +47,7 @@ class computer(models.Model):
     productImage= models.ImageField(upload_to='product_images')
 
     def __str__(self):
-        return "%s" %(self.productName)  (self.productPrice)
+        return  f"{self.productName}  ({self.productPrice})"
     
 class jumkas(models.Model):
     productName= models.CharField(max_length=100)
@@ -55,7 +55,7 @@ class jumkas(models.Model):
     productImage= models.ImageField(upload_to='product_images')
 
     def __str__(self):
-        return "%s" %(self.productName)  (self.productPrice)
+        return  f"{self.productName}  ({self.productPrice})"
     
 class necklaces(models.Model):
     productName= models.CharField(max_length=100)
@@ -63,7 +63,7 @@ class necklaces(models.Model):
     productImage= models.ImageField(upload_to='product_images')
 
     def __str__(self):
-        return "%s" %(self.productName)  (self.productPrice)
+        return  f"{self.productName}  ({self.productPrice})"
     
 class kangans(models.Model):
     productName= models.CharField(max_length=100)
@@ -71,4 +71,4 @@ class kangans(models.Model):
     productImage= models.ImageField(upload_to='product_images')
 
     def __str__(self):
-        return "%s" %(self.productName)  (self.productPrice)
+        return  f"{self.productName}  ({self.productPrice})"

@@ -2,25 +2,33 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from .models import manTshirt, manShirt, womanScart,laptop, mobile, computer, jumkas, kangans, necklaces
 
+
 # Create your views here.
 
 def index(request):
     # return JsonResponse({'foo':'bar'})
-    manTshirt= manTshirt.objects.all
-    manShirt= manShirt.objects.all 
-    womanScart= womanScart.objects.all 
 
-    laptop= laptop.objects.all 
-    mobile= mobile.objects.all 
-    computer= computer.objects.all 
+    mantshirt= manTshirt.objects.all()
+    manshirt= manShirt.objects.all()
+    womanscart= womanScart.objects.all()
 
-    jumkas= jumkas.objects.all 
-    kangans= kangans.objects.all 
-    necklaces= necklaces.objects.all 
+    laptops= laptop.objects.all()
+    mobiles= mobile.objects.all()
+    computers= computer.objects.all()
+
+    jumkass= jumkas.objects.all()
+    kanganss= kangans.objects.all()
+    necklacess= necklaces.objects.all()
+
+    Fashion = list(zip(mantshirt, manshirt, womanscart))
+    Electronics = list(zip(laptops, mobiles, computers))
+    Jewellery = list(zip(jumkass, kanganss, necklacess))
+
+    
 
     context = {
-        "fasion" : [manTshirt,manShirt,womanScart]
-        "electronics" : [laptop, mobile, computer]
-        "jewelery" : [jumkas, kangans, necklaces]
+        "fashion" : Fashion,
+        "electronics" : Electronics,
+        "ewelery" : Jewellery
     }
     return render(request, 'index.html', context=context)
